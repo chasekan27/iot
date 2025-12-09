@@ -3,10 +3,10 @@
 #include "uart1_handler.h"
 #include <zephyr/kernel.h>
 #include "thread_creation.h"
-//#include "my_dts_init.h"
+#include "my_dts_init.h"
     int main(void)
     {
-    //    gpio_app_init(); 
+        gpio_app_init(); 
         uart1_init();
         create_thread();
         while (1) 

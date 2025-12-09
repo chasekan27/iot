@@ -15,7 +15,8 @@ const struct gpio_dt_spec led0      = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 const struct gpio_dt_spec led1      = GPIO_DT_SPEC_GET(LED1_NODE, gpios);
 
 /* Initialization function */
-static int gpio_app_init(void)
+//static
+int gpio_app_init(void)
 {
     int ret;
 
@@ -68,4 +69,4 @@ static int gpio_app_init(void)
 }
 
 /* Run initialization at POST_KERNEL priority */
-SYS_INIT(gpio_app_init, POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+//SYS_INIT(gpio_app_init, POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
