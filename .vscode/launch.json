@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Zephyr STM32 Debug",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/zephyr/zephyr.elf",
+
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            
+            "preLaunchTask": "west-build",
+            "runToEntryPoint": "main",
+
+            "serverpath": "/home/chasekan/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd"
+        }
+    ]
+}

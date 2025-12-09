@@ -1,0 +1,7 @@
+{
+    "cortex-debug.gdbPath": "/home/chasekan/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb",
+    "cortex-debug.armToolchainPath": "/home/chasekan/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin",
+    "cortex-debug.openocdPath": "/home/chasekan/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd",
+    "stm32-for-vscode.openOCDPath": false,
+    "stm32-for-vscode.armToolchainPath": false
+}

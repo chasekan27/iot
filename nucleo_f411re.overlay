@@ -1,0 +1,47 @@
+///dts-v1/;
+/ {
+	#address-cells = <1>; 
+	#size-cells = <1>;
+    gpio_keys {
+        compatible = "gpio-keys";
+
+        label_blue_button: node_blue_button {
+            gpios = <&gpioc 13 GPIO_ACTIVE_LOW>;
+            label = "user_blue_button";
+            zephyr,code = <INPUT_KEY_1>;
+        };
+
+        label_wire_button: node_wire_button {
+            gpios = <&gpiob 14 GPIO_ACTIVE_LOW>;
+            label = "user_wire_button";
+            zephyr,code = <INPUT_KEY_2>;
+        };
+    };
+
+    leds {
+        compatible = "gpio-leds";
+
+        label_inbuilt_green_led: node_inbuilt_green_led {
+            gpios = <&gpioa 5 GPIO_ACTIVE_HIGH>;
+            label = "user_inbuilt_green_led";
+        };
+
+        label_external_green_led: node_external_green_led {
+            gpios = <&gpiob 13 GPIO_ACTIVE_HIGH>;
+            label = "user_external_green_led";
+        };
+    };
+    aliases {
+        sw1 = &label_blue_button;
+        sw2 = &label_wire_button;
+        led0 = &label_inbuilt_green_led;
+        led1 = &label_external_green_led;
+    };
+};
+/* --- UART1 configuration --- */
+&usart1 {
+    status = "okay";
+    current-speed = <115200>;
+    pinctrl-names = "default";
+    pinctrl-0 = <&usart1_tx_pa9 &usart1_rx_pa10>;
+};

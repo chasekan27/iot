@@ -1,0 +1,5 @@
+west:
+  command: /home/chasekan/zephyrproject/.venv/bin/west build -p always -b nucleo_f411re
+    /home/chasekan/zephyrproject/iot
+  topdir: /home/chasekan/zephyrproject
+  version: 1.5.0

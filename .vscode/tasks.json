@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "west-clean",
+            "type": "shell",
+            "command": "rm -rf build",
+            "problemMatcher": []
+        },
+
+        {
+            "label": "west-build",
+            "type": "shell",
+            "command": "west build -p always -b nucleo_f411re ${workspaceFolder}",
+            "problemMatcher": [],
+            "dependsOn": "west-clean"
+        }
+    ]
+}

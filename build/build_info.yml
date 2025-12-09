@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/chasekan/zephyrproject/iot'
+    source-dir: '/home/chasekan/zephyrproject/iot'
+  board:
+    name: 'nucleo_f411re'
+    path:
+     - '/home/chasekan/zephyrproject/zephyr/boards/st/nucleo_f411re'
+    qualifiers: 'stm32f411xe'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/chasekan/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/chasekan/zephyrproject/zephyr/boards/st/nucleo_f411re/nucleo_f411re.dts'
+     - '/home/chasekan/zephyrproject/iot/nucleo_f411re.overlay'
+    include-dirs:
+     - '/home/chasekan/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/chasekan/zephyrproject/modules/hal/atmel/include'
+     - '/home/chasekan/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/chasekan/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/chasekan/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/chasekan/zephyrproject/modules/hal/microchip/include'
+     - '/home/chasekan/zephyrproject/modules/hal/microchip/dts'
+     - '/home/chasekan/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/chasekan/zephyrproject/modules/hal/nxp/dts'
+     - '/home/chasekan/zephyrproject/modules/hal/stm32/dts'
+     - '/home/chasekan/zephyrproject/modules/hal/ti/dts'
+     - '/home/chasekan/zephyrproject/zephyr/include'
+     - '/home/chasekan/zephyrproject/zephyr/include/zephyr'
+     - '/home/chasekan/zephyrproject/zephyr/dts/common'
+     - '/home/chasekan/zephyrproject/zephyr/dts/vendor'
+     - '/home/chasekan/zephyrproject/zephyr/dts/rx'
+     - '/home/chasekan/zephyrproject/zephyr/dts/x86'
+     - '/home/chasekan/zephyrproject/zephyr/dts/xtensa'
+     - '/home/chasekan/zephyrproject/zephyr/dts/sparc'
+     - '/home/chasekan/zephyrproject/zephyr/dts/riscv'
+     - '/home/chasekan/zephyrproject/zephyr/dts/posix'
+     - '/home/chasekan/zephyrproject/zephyr/dts/arm64'
+     - '/home/chasekan/zephyrproject/zephyr/dts/arm'
+     - '/home/chasekan/zephyrproject/zephyr/dts/arc'
+     - '/home/chasekan/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/chasekan/zephyrproject/iot/nucleo_f411re.overlay'
+  kconfig:
+    files:
+     - '/home/chasekan/zephyrproject/zephyr/boards/st/nucleo_f411re/nucleo_f411re_defconfig'
+     - '/home/chasekan/zephyrproject/iot/prj.conf'
+    user-files:
+     - '/home/chasekan/zephyrproject/iot/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/chasekan/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/chasekan/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/chasekan/zephyrproject/.venv/bin/west build -p always -b nucleo_f411re /home/chasekan/zephyrproject/iot'
+  topdir: '/home/chasekan/zephyrproject'
+  version: '1.5.0'
