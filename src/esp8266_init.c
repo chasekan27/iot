@@ -12,23 +12,18 @@ unsigned int at_command_send(unsigned char *cmd)
     }
     return 0;
  }
- void init_wifi_module(void)
- {
-        at_command_send("AT\r\n");
+void init_nodemcu8266_module(void *p1, void *p2, void *p3)
+{
+            at_command_send("AT\r\n");
         k_msleep(2000);
         at_command_send("AT+CWMODE=1\r\n");
         k_msleep(2000);
         at_command_send("AT+CWLAP\r\n");
         k_msleep(6000);
-        
         at_command_send("AT+CWJAP=\"POCO\",\"Aaaaaa1.\"\r\n");
-        k_msleep(2000);
- }
-void init_nodemcu8266_module(void *p1, void *p2, void *p3)
-{
+ 
     while (1)
     {
-        printk("i am node mcu module\n");
-        k_msleep(1000);
+               k_msleep(2000);    
     }
 }
