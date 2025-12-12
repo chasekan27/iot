@@ -55,31 +55,3 @@ int gpio_app_init(void)
     printk("GPIO initialization done.\n");
     return 0;
 }
-
-/*
-void bmp280_read_values(void)
-{
-    struct sensor_value temp, press;
-
-    if (!device_is_ready(bmp280)) {
-        printk("BMP280 is not ready!\n");
-        return;
-    }
-
-    if (sensor_sample_fetch(bmp280) < 0) {
-        printk("Failed to fetch sample\n");
-        return;
-    }
-
-sensor_sample_fetch(bmp280);
-sensor_channel_get(bmp280, SENSOR_CHAN_AMBIENT_TEMP, &temp);
-sensor_channel_get(bmp280, SENSOR_CHAN_PRESS, &press);
-
-    printk("Temperature: %d.%06d °C\n", temp.val1, temp.val2);
-    printk("Pressure:    %d.%06d kPa\n", press.val1, press.val2);
-}
-
-    bmp280_read_values();
-
-}
-*/
