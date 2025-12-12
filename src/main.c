@@ -8,6 +8,7 @@
     {
         gpio_app_init(); 
         uart1_init();
+        i2c1_init();
         create_thread();
         while (1) 
         {
