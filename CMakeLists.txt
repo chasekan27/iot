@@ -9,4 +9,5 @@ target_sources(app PRIVATE
     src/my_dts_init.c
     src/uart1_handler.c
     src/thread_creation.c
+    src/bmp280.c 
 )
