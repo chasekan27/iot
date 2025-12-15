@@ -6,6 +6,8 @@
 /* Thread stack */
 K_THREAD_STACK_DEFINE(nodemcu8266_stack, NODEMCU8266_THREAD_STACK);
 K_THREAD_STACK_DEFINE(bpm280_stack, BPM280_THREAD_STACK);
+/* Semaphore for data synchronization */
+K_SEM_DEFINE(pbm280_sem, 0, 1);
 /* Thread control block */
 static struct k_thread nodemcu8266_thread;
 static struct k_thread bpm280_thread;

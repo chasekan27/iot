@@ -7,5 +7,6 @@
 #define BPM280_THREAD_PRIO  1
 
 unsigned int create_thread(void);
+extern struct k_sem pbm280_sem;
 
 #endif

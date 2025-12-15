@@ -4,7 +4,7 @@
 #include <zephyr/devicetree.h>
 #include <zephyr/sys/printk.h>
 #include <zephyr/drivers/i2c.h>
-
+#include "thread_creation.h"
 /* Sensor node */
 #define BMP_NODE DT_NODELABEL(bmp280)
 static const struct device *bmp280 = DEVICE_DT_GET(BMP_NODE);
@@ -15,6 +15,7 @@ static const struct device *i2c_bus = DEVICE_DT_GET(I2C_NODE);
 
 void bmp280_read_values(void *p1, void *p2, void *p3)
 {
+    k_sem_take(&pbm280_sem, K_FOREVER);
     ARG_UNUSED(p1);
     ARG_UNUSED(p2);
     ARG_UNUSED(p3);
